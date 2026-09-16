@@ -1,0 +1,29 @@
+name: Publish TomBlock resource pack
+
+on:
+  push:
+    tags:
+      - 'pack-v*'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out pack-only repository
+        uses: actions/checkout@v4
+
+      - name: Package resource pack
+        run: |
+          test -f pack.mcmeta
+          zip -q -r "$RUNNER_TEMP/TomBlock-Resource-Pack.zip" pack.mcmeta assets
+          unzip -Z -1 "$RUNNER_TEMP/TomBlock-Resource-Pack.zip" | grep -Fx 'pack.mcmeta'
+
+      - name: Publish versioned ZIP
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.ref_name }}
+        run: gh release create "$TAG" "$RUNNER_TEMP/TomBlock-Resource-Pack.zip" --title "TomBlock resource pack $TAG" --generate-notes
