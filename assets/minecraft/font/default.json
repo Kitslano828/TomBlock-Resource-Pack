@@ -9,7 +9,7 @@
       },
       {
         "type": "ttf",
-        "file": "minecraft:font/minecraft_ten.ttf",
+        "file": "minecraft:minecraft_ten.ttf",
         "shift": [0.0, 0.0],
         "size": 11.0,
         "oversample": 4.0
