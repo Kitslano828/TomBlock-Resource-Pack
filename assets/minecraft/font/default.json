@@ -8,13 +8,6 @@
         }
       },
       {
-        "type": "ttf",
-        "file": "minecraft:minecraft_ten.ttf",
-        "shift": [0.0, 0.0],
-        "size": 11.0,
-        "oversample": 4.0
-      },
-      {
         "type": "bitmap",
         "file": "minecraft:font/nonlatin_european.png",
         "ascent": 7,
@@ -173,7 +166,7 @@
       },
       {
         "type": "bitmap",
-        "file": "monocraft:font/ascii.png",
+        "file": "tomblock:font/minecraft_ten_ascii.png",
         "ascent": 7,
         "chars": [
           "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",

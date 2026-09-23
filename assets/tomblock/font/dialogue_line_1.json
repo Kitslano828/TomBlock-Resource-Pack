@@ -1,13 +1,6 @@
 {
   "providers": [
     {
-      "type": "ttf",
-      "file": "minecraft:minecraft_ten.ttf",
-      "shift": [0.0, 33.0],
-      "size": 8.0,
-      "oversample": 4.0
-    },
-    {
       "type": "bitmap",
       "file": "tomblock:font/dialogue_lines_ascii.png",
       "height": 48,
