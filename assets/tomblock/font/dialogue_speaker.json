@@ -1,6 +1,13 @@
 {
   "providers": [
     {
+      "type": "ttf",
+      "file": "minecraft:minecraft_seven.ttf",
+      "shift": [0.0, 51.0],
+      "size": 8.0,
+      "oversample": 4.0
+    },
+    {
       "type": "bitmap",
       "file": "tomblock:font/dialogue_speaker_ascii.png",
       "height": 64,
