@@ -1,0 +1,18 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "tomblock:font/status_heart.png",
+      "height": 16,
+      "ascent": -1,
+      "chars": ["\uE100"]
+    },
+    {
+      "type": "bitmap",
+      "file": "tomblock:font/status_energy.png",
+      "height": 15,
+      "ascent": -1,
+      "chars": ["\uE103"]
+    }
+  ]
+}
