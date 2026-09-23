@@ -8,6 +8,13 @@
         }
       },
       {
+        "type": "ttf",
+        "file": "minecraft:font/minecraft_ten.ttf",
+        "shift": [0.0, 0.0],
+        "size": 11.0,
+        "oversample": 4.0
+      },
+      {
         "type": "bitmap",
         "file": "minecraft:font/nonlatin_european.png",
         "ascent": 7,
