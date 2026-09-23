@@ -5,15 +5,11 @@
       "id": "minecraft:include/space"
     },
     {
-      "type": "ttf",
-      "file": "minecraft:minecraft_seven.ttf",
-      "shift": [0.0, 0.0],
-      "size": 11.0,
-      "oversample": 4.0
-    },
-    {
       "type": "reference",
-      "id": "minecraft:include/default"
+      "id": "minecraft:include/default",
+      "filter": {
+        "uniform": false
+      }
     },
     {
       "type": "reference",
