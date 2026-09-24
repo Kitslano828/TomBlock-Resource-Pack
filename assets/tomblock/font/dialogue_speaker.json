@@ -1,1 +1,1 @@
-{"providers":[{"type":"ttf","file":"tomblock:font/qrafty.ttf","shift":[0.0,51.0],"size":8.0,"oversample":4.0},{"type":"reference","id":"minecraft:include/default"}]}
+{"providers":[{"type":"space","advances":{" ":3}},{"type":"bitmap","file":"tomblock:font/qrafty_dialogue_speaker_ascii.png","height":64,"ascent":58,"chars":[" !\"#$%&'()*+,-./","0123456789:;<=>?","@ABCDEFGHIJKLMNO","PQRSTUVWXYZ[\\]^_","`abcdefghijklmno","pqrstuvwxyz{|}~\u0000"]},{"type":"reference","id":"minecraft:include/default"}]}
