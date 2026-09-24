@@ -23,10 +23,17 @@ out vec2 texCoord0;
 
 vec4 hudColor(int encodedGreen) {
     int palette = (encodedGreen - 16) / 9;
+    if (palette == 0) return vec4(1.00000000, 1.00000000, 1.00000000, 1.0);
     if (palette == 1) return vec4(1.00000000, 0.25098039, 0.33333333, 1.0);
     if (palette == 2) return vec4(0.00000000, 0.90196078, 0.76470588, 1.0);
     if (palette == 3) return vec4(0.94901961, 0.68235294, 0.19607843, 1.0);
     if (palette == 4) return vec4(0.66666667, 0.66666667, 0.66666667, 1.0);
+    if (palette == 5) return vec4(1.00000000, 0.66666667, 0.00000000, 1.0);
+    if (palette == 6) return vec4(1.00000000, 0.33333333, 0.33333333, 1.0);
+    if (palette == 7) return vec4(1.00000000, 1.00000000, 0.33333333, 1.0);
+    if (palette == 8) return vec4(0.33333333, 1.00000000, 0.33333333, 1.0);
+    if (palette == 9) return vec4(0.00000000, 0.66666667, 0.66666667, 1.0);
+    if (palette == 10) return vec4(0.33333333, 0.33333333, 0.33333333, 1.0);
     return vec4(1.0);
 }
 
