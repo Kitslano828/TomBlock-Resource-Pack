@@ -21,13 +21,24 @@ out float cylindricalVertexDistance;
 out vec4 vertexColor;
 out vec2 texCoord0;
 
+vec4 hudColor(int encodedGreen) {
+    int palette = (encodedGreen - 16) / 9;
+    if (palette == 1) return vec4(1.00000000, 0.25098039, 0.33333333, 1.0);
+    if (palette == 2) return vec4(0.00000000, 0.90196078, 0.76470588, 1.0);
+    if (palette == 3) return vec4(0.94901961, 0.68235294, 0.19607843, 1.0);
+    if (palette == 4) return vec4(0.66666667, 0.66666667, 0.66666667, 1.0);
+    return vec4(1.0);
+}
+
 void main() {
     vec3 hudPosition = Position;
     ivec3 marker = ivec3(round(Color.rgb * 255.0));
-    bool tomblockHud = marker.r == 250 && marker.g >= 16 && marker.g <= 24;
+    bool tomblockHud = marker.r == 250 && marker.g >= 16 && marker.g <= 159;
     if (tomblockHud) {
         vec2 screen = vec2(2.0 / ProjMat[0][0], -2.0 / ProjMat[1][1]);
-        int anchor = marker.g - 16;
+		int encoded = marker.g - 16;
+		int anchor = encoded % 9;
+		int palette = encoded / 9;
         int horizontal = anchor % 3;
         int vertical = anchor / 3;
         if (horizontal == 0) hudPosition.x -= screen.x * 0.5;
@@ -40,9 +51,9 @@ void main() {
 #if !defined(IS_GUI) && !defined(IS_SEE_THROUGH)
     sphericalVertexDistance = fog_spherical_distance(Position);
     cylindricalVertexDistance = fog_cylindrical_distance(Position);
-    vertexColor = tomblockHud ? vec4(1.0) : Color * sample_lightmap(Sampler2, UV2);
+    vertexColor = tomblockHud ? hudColor(marker.g) : Color * sample_lightmap(Sampler2, UV2);
 #else
-    vertexColor = tomblockHud ? vec4(1.0) : Color;
+    vertexColor = tomblockHud ? hudColor(marker.g) : Color;
 #endif
     texCoord0 = UV0;
 }
