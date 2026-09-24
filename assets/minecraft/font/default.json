@@ -1,6 +1,13 @@
 {
   "providers": [
     {
+      "type": "ttf",
+      "file": "tomblock:font/qrafty.ttf",
+      "shift": [0.0, 0.0],
+      "size": 8.0,
+      "oversample": 4.0
+    },
+    {
       "type": "reference",
       "id": "minecraft:include/space"
     },
