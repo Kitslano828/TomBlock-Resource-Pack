@@ -46,7 +46,7 @@ vec4 hudColor(int encodedGreen) {
 void main() {
     vec3 hudPosition = Position;
     ivec3 marker = ivec3(round(Color.rgb * 255.0));
-    bool tomblockHud = marker.r == 250 && marker.g >= 16 && marker.g <= 159;
+    bool tomblockHud = marker.r == 250 && marker.g >= 16 && marker.g <= 168;
     if (tomblockHud) {
         vec2 screen = vec2(2.0 / ProjMat[0][0], -2.0 / ProjMat[1][1]);
 		int encoded = marker.g - 16;
