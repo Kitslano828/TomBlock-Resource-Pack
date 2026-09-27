@@ -34,6 +34,7 @@ vec4 hudColor(int encodedGreen) {
     if (palette == 8) return vec4(0.33333333, 1.00000000, 0.33333333, 1.0);
     if (palette == 9) return vec4(0.00000000, 0.66666667, 0.66666667, 1.0);
     if (palette == 10) return vec4(0.33333333, 0.33333333, 0.33333333, 1.0);
+    if (palette == 11) return vec4(0.00000000, 0.00000000, 0.00000000, 1.0);
     return vec4(1.0);
 }
 
